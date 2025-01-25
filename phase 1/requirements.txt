@@ -1,0 +1,14 @@
+pandas
+openai
+psycopg
+python-dotenv
+timescale-vector
+instructor
+anthropic
+google-generativeai
+fpdf2
+timescale_vector
+streamlit
+PyPDF2
+torch
+transformers
