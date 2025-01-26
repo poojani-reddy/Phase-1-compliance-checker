@@ -84,13 +84,13 @@ def create_pdf_report(response, filename="contract_analysis_report.pdf", no_resu
     if no_results:
         pdf.set_font("Helvetica", "B", 12)
         pdf.cell(0, 10, "No relevant results found in the contract.", ln=True)
-        pdf.set_font("Helvetica", "", 11)
+        pdf.set_font("Helvetica", "B", 11)
         pdf.ln(5)
         pdf.multi_cell(0, 7, "Please review the contract content or embeddings.")
     else:
         pdf.set_font("Helvetica", "B", 12)
         pdf.cell(0, 10, "Analysis Summary:", ln=True)
-        pdf.set_font("Helvetica", "", 11)
+        pdf.set_font("Helvetica", "B", 11)
         # for para in response.get("answer", "").split('\n'):
         for para in response.answer.split('\n'): 
             cleaned_para = para.strip()
