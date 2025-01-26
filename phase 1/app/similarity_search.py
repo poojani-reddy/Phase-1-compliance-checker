@@ -28,7 +28,7 @@ def create_pdf_report(response, filename="contract_analysis_report.pdf"):
     # Analysis Summary
     pdf.set_font("Helvetica", "B", 12)
     pdf.cell(0, 10, "Analysis Summary:", ln=True)
-    pdf.set_font("Helvetica", "", 11)
+    pdf.set_font("Helvetica", "B", 11)
 
     paragraphs = response.get("answer", "").split('\n')
     for para in paragraphs:
@@ -41,7 +41,7 @@ def create_pdf_report(response, filename="contract_analysis_report.pdf"):
     pdf.ln(10)
     pdf.set_font("Helvetica", "B", 12)
     pdf.cell(0, 10, "Detailed Analysis:", ln=True)
-    pdf.set_font("Helvetica", "", 11)
+    pdf.set_font("Helvetica", "B", 11)
 
     thought_process = response.get("thought_process", [])
     for thought in thought_process:
@@ -54,7 +54,7 @@ def create_pdf_report(response, filename="contract_analysis_report.pdf"):
     pdf.ln(10)
     pdf.set_font("Helvetica", "B", 12)
     pdf.cell(0, 10, "Context Assessment:", ln=True)
-    pdf.set_font("Helvetica", "", 11)
+    pdf.set_font("Helvetica", "B", 11)
     context_info = f"Sufficient context available: {response.get('enough_context', False)}"
     pdf.multi_cell(0, 7, context_info)
 
