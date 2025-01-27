@@ -24,7 +24,7 @@ Pgvectorscale Vector builds on top of [pgvector](https://github.com/pgvector/pgv
 
 - Docker
 - Python 3.7+
-- OpenAI API key
+- Gemini API key
 - PostgreSQL GUI client
 
 ## Steps
